@@ -6,9 +6,9 @@ The host-based forensic analysis did not identify evidence of malicious activity
 Processes and network connections were reviewed, correlated, and validated using native system utilities and external threat intelligence sources. No indicators of compromise, unauthorized persistence mechanisms, or suspicious executable behavior were identified during the investigation.
 
 ## Network Activity Findings
-Analysis of active network connections revealed multiple established TCP and UDP sessions, including outbound connections to external IP addresses over standard ports such as 80 and 443. These connections were consistent with normal web browsing activity and operating system services.
+Analysis of active network connections identified multiple established TCP and UDP sessions, including outbound connections to external IP addresses over standard service ports (e.g., 80 and 443). These connections were consistent with expected web browsing behavior and normal Windows operating system services.
 
-No unusual listening ports, anomalous foreign IP addresses, or persistent connections indicative of command-and-control infrastructure were identified.
+No anomalous listening ports, suspicious foreign IP addresses, or persistent outbound connections indicative of command-and-control activity were observed.
 
 **Supporting Evidence – Active Network Connections (netstat):**
 
@@ -35,9 +35,9 @@ The reviewed executables, including msedge.exe, were confirmed as legitimate and
 ![VirusTotal analysis of msedge.exe](Assets/screenshots/virustotal-analysis-msedge.exe.png)
 
 ## Correlation Findings
-Correlation of process, network, and executable data demonstrated consistent and expected system behavior. Network connections were successfully mapped to legitimate running processes, and associated executables were validated as trusted binaries.
+Correlation of process, network, and executable data demonstrated consistent and expected system behavior. Active network connections were successfully mapped to legitimate running processes, and associated executables were validated as trusted binaries.
 
-No discrepancies were identified between process behavior, network activity, and executable integrity that would suggest malicious or unauthorized activity.
+No discrepancies were identified that would suggest malicious execution, unauthorized persistence, or suspicious network behavior.
 
 ## Overall Assessment
 Based on the evidence collected and analyzed, the system exhibited no indicators of compromise at the time of investigation. All observed activity was consistent with normal Windows host behavior during active use.

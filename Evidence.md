@@ -23,14 +23,14 @@ While live system analysis involves volatile data, steps were taken to ensure ac
 ## Host Network Configuration
 
 The `ipconfig` command was executed to document the system’s active network interfaces, assigned IP addresses, subnet masks, and default gateways at the time of analysis.
-![Host network configuration using ipconfig](../Assets/screenshots/host-network-configuration-ipconfig.png)
+![Host network configuration using ipconfig](Assets/screenshots/host-network-configuration-ipconfig.png)
 
 ## Active Network Connections
 
 The `netstat -ano` command was used to enumerate active TCP and UDP connections, listening ports, and associated process identifiers (PIDs).
-![Active network connections identified with netstat](../Assets/screenshots/host-network-connections-netstat.png)
+![Active network connections identified with netstat](Assets/screenshots/host-network-connections-netstat.png)
 
 ## Process Enumeration and PID Mapping
 
 The `tasklist` command output was reviewed and correlated with network connection PIDs to associate active connections with running processes.
-![Tasklist and netstat PID correlation](../Assets/screenshots/tasklist-and-netstat-pid-correlation.png)
+![Tasklist and netstat PID correlation](Assets/screenshots/tasklist-and-netstat-pid-correlation.png)

@@ -1,16 +1,31 @@
 # Executive Summary
 
 ## Case Overview
-This project documents a host-based forensic investigation conducted on a live system to identify potentially suspicious processes and network activity. The investigation focused on analyzing running processes, active network connections, and executable files to assess whether malicious activity was present and determine if escalation or remediation was required.
+This project documents a host-based forensic investigation performed on a live Windows system to assess running processes and active network connections for signs of suspicious or unauthorized activity. The investigation simulates a real-world SOC and incident response triage scenario, focusing on rapid identification, validation, and risk assessment of host-level activity.
 
 ## Scope of Investigation
-The scope of this investigation included live system analysis of running processes, identification of active network connections, examination of executable file properties, and validation of suspicious artifacts through hash analysis and threat intelligence correlation. The investigation was conducted using command-line tools and system utilities commonly leveraged during SOC and DFIR triage activities.
+The investigation focused on live system analysis, including:
+- Enumeration of running processes
+- Identification and review of active network connections
+- Examination of executable file properties and metadata
+- Validation of suspicious artifacts using cryptographic hash analysis and threat intelligence correlation
+
+All analysis was conducted using native command-line tools and system utilities commonly leveraged during SOC and DFIR investigations.
 
 ## High-Level Findings
-Analysis identified multiple running processes and active network connections requiring further scrutiny. Several executables were reviewed for legitimacy through file inspection and hash validation. Threat intelligence correlation was used to assess potential malicious indicators, and network activity was evaluated to determine whether connections were expected or anomalous.
+The analysis identified multiple running processes and network connections requiring contextual validation. Executable files associated with active processes were examined to determine legitimacy through file inspection and hash verification. Network connections were reviewed to assess whether communication patterns aligned with expected system behavior or indicated potential anomalies.
 
-## Risk and Impact
-Unauthorized or malicious processes running on an endpoint can enable persistence, data exfiltration, or lateral movement within an environment. Suspicious network connections increase the risk of command-and-control communication or unauthorized data transfer if not promptly identified and contained.
+No immediate evidence of confirmed malware was identified during the initial triage; however, several artifacts warranted continued monitoring and follow-up validation.
+
+## Risk and Impact Assessment
+Unverified or unauthorized processes on an endpoint can introduce risk, including persistence mechanisms, data exfiltration, or lateral movement opportunities. Suspicious or unexplained network connections increase exposure to command-and-control activity or unauthorized external communication if left unaddressed.
+
+Early detection and validation at the host level is critical to reducing dwell time and limiting potential operational impact.
 
 ## Recommended Actions
-Based on the investigation, recommendations included continued monitoring of endpoint processes, validation of unknown executables, enhanced network traffic visibility, and escalation of confirmed suspicious activity for containment and remediation. Additional endpoint hardening and user awareness measures were advised to reduce future risk.
+Based on investigative findings, the following actions were recommended:
+- Continued monitoring of endpoint process activity
+- Validation and reputation analysis of unknown executables
+- Improved visibility into outbound network connections
+- Escalation of confirmed suspicious activity for containment and remediation
+- Strengthening endpoint hardening and user awareness controls to reduce future risk
